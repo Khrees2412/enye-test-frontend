@@ -1,0 +1,84 @@
+body {
+	background-color: indigo;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	/* #222831 */
+}
+.status {
+	display: flex;
+	align-items: center;
+	width: 75%;
+}
+.users-display {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 75%;
+	border: 2px solid ghostwhite;
+	border-radius: 3px;
+	/* box-shadow: 3px 2px 3px 2px gray, -3px -2px 3px 2px gray, 3px -2px 3px 2px gray, -3px 2px 3px 2px gray; */
+	padding: 30px;
+	margin: 10px auto;
+}
+h1 {
+	text-align: center;
+}
+form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 75%;
+	margin: 20px auto;
+}
+input {
+	width: 75%;
+	padding: 10px;
+	margin-top: 10px;
+	border: 2px solid #222831;
+	border-radius: 5px;
+}
+input:focus {
+	border: 2px solid #008891;
+}
+.email {
+	font-size: 15px;
+	color: grey;
+}
+li {
+	list-style-type: none;
+	margin: 10px;
+}
+.pagination {
+	display: flex;
+	justify-content: space-between;
+}
+.page-item {
+	padding: 10px;
+	background-color: black;
+}
+.page-link {
+	color: blue;
+}
+.radio-component {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 75%;
+	color: yellow;
+}
+.payment-method {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 75%;
+	color: pink;
+}
+@media only screen and (max-width: 768px) {
+	input {
+		width: 100%;
+	}
+}
