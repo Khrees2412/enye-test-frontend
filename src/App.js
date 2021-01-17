@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { FaSpinner } from "react-icons/fa";
 import Card from "./components/Card";
 import PaymentMethod from "./components/PaymentMethod";
 import Search from "./components/Search";
@@ -99,9 +100,18 @@ export default function App() {
 	const paginate = pageNumber => setCurrentPage(pageNumber);
 
 	if (error) {
-		return <div className="status">Error: {error.message}</div>;
+		return (
+			<div className="status App error">
+				<p>Error: {error.message}</p>
+				<div>Check Network Connection and Reload Page</div>
+			</div>
+		);
 	} else if (!isLoaded) {
-		return <div className="status">Loading...</div>;
+		return (
+			<div className="status spinner">
+				<FaSpinner />
+			</div>
+		);
 	} else {
 		return (
 			<div className="App">

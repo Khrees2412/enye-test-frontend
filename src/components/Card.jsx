@@ -18,7 +18,7 @@ export default function Card({ results, filtered, searchInput, genderDisplay, pa
 	// 						<p>
 	// 							{item.FirstName} {item.LastName}
 	// 						</p>
-	// <p>{item.Gender}</p>
+	// 						<p>{item.Gender}</p>
 	// 						<p className="email"> {item.Email}</p>
 	// 					</div>
 	// 			  ))}
@@ -37,8 +37,10 @@ export default function Card({ results, filtered, searchInput, genderDisplay, pa
 				<p>
 					{item.FirstName} {item.LastName}
 				</p>
-				<p>{item.Gender}</p>
-				<p>{item.PaymentMethod}</p>
+				<div className="filters">
+					<p>{item.Gender}</p>
+					<p>{item.PaymentMethod}</p>
+				</div>
 
 				<p className="email"> {item.Email}</p>
 			</div>
@@ -49,8 +51,10 @@ export default function Card({ results, filtered, searchInput, genderDisplay, pa
 				<p>
 					{item.FirstName} {item.LastName}
 				</p>
-				<p>{item.Gender}</p>
-				<p>{item.PaymentMethod}</p>
+				<div className="filters">
+					<p>{item.Gender}</p>
+					<p>{item.PaymentMethod}</p>
+				</div>
 				<p className="email"> {item.Email}</p>
 			</div>
 		));

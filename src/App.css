@@ -8,15 +8,19 @@ body {
 	display: flex;
 	align-items: center;
 	width: 75%;
+	margin: 50px auto;
+}
+.spinner {
+	width: 300px;
 }
 .users-display {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
 .card {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
 	width: 75%;
 	border: 2px solid ghostwhite;
 	border-radius: 3px;

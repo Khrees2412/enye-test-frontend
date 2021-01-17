@@ -1,3 +1,5 @@
+import { FaMale, FaFemale, FaGenderless } from "react-icons/fa";
+
 export default function Radio({ selectedGender, onGenderChange, formSubmit }) {
 	return (
 		<form className="radio-component" onSubmit={formSubmit}>
@@ -5,6 +7,7 @@ export default function Radio({ selectedGender, onGenderChange, formSubmit }) {
 				<label>
 					<input type="radio" value="Male" checked={selectedGender === "Male"} onChange={onGenderChange} />
 					Male
+					<FaMale />
 				</label>
 			</div>
 			<div className="radio">
@@ -16,6 +19,7 @@ export default function Radio({ selectedGender, onGenderChange, formSubmit }) {
 						onChange={onGenderChange}
 					/>
 					Female
+					<FaFemale />
 				</label>
 			</div>
 			<div className="radio">
@@ -27,6 +31,7 @@ export default function Radio({ selectedGender, onGenderChange, formSubmit }) {
 						onChange={onGenderChange}
 					/>
 					Prefer to Skip
+					<FaGenderless />
 				</label>
 			</div>
 		</form>

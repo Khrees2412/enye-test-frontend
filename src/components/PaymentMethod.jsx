@@ -1,9 +1,14 @@
+import { FaPaypal, FaMoneyBillAlt, FaMoneyCheck, FaCreditCard } from "react-icons/fa";
+
 export default function PaymentMethod({ onPaymentChange, selectedPayment }) {
 	return (
 		<div>
 			<form className="payment-method">
 				<div>
-					<label htmlFor="paypal">Paypal</label>
+					<label htmlFor="paypal">
+						Paypal
+						<FaPaypal />
+					</label>
 					<input
 						type="radio"
 						id="paypal"
@@ -13,7 +18,9 @@ export default function PaymentMethod({ onPaymentChange, selectedPayment }) {
 					/>
 				</div>
 				<div>
-					<label htmlFor="money-order">Money Order</label>
+					<label htmlFor="money-order">
+						Money Order <FaMoneyBillAlt />
+					</label>
 					<input
 						type="radio"
 						id="money-order"
@@ -23,7 +30,9 @@ export default function PaymentMethod({ onPaymentChange, selectedPayment }) {
 					/>
 				</div>
 				<div>
-					<label htmlFor="check">Check</label>
+					<label htmlFor="check">
+						Check <FaMoneyCheck />
+					</label>
 					<input
 						type="radio"
 						id="check"
@@ -33,7 +42,10 @@ export default function PaymentMethod({ onPaymentChange, selectedPayment }) {
 					/>
 				</div>
 				<div>
-					<label htmlFor="cc">CC</label>
+					<label htmlFor="cc">
+						CC
+						<FaCreditCard />
+					</label>
 					<input
 						type="radio"
 						id="cc"
