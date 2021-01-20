@@ -1,12 +1,7 @@
-import { FaSearch } from "react-icons/fa";
-
 export default function Search({ searchInput, handleChange }) {
 	return (
 		<form>
-			<h2>Search for a specific user</h2>
-			<div className="search-icon">
-				<FaSearch />
-			</div>
+			<h2>Search for a user</h2>
 			<input type="search" value={searchInput} onChange={e => handleChange(e)} />
 		</form>
 	);

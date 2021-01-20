@@ -5,11 +5,12 @@ import Card from "./components/Card";
 import PaymentMethod from "./components/PaymentMethod";
 import Search from "./components/Search";
 import Pagination from "./components/Pagination";
-import Radio from "./components/Radio";
+import Gender from "./components/Gender";
 
 export default function App() {
 	const [error, setError] = useState(null);
 	const [isLoaded, setIsLoaded] = useState(false);
+
 	const [results, setResults] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [resultsPerPage] = useState(20);
@@ -93,7 +94,6 @@ export default function App() {
 
 	const formSubmit = event => {
 		event.preventDefault();
-		console.log(selectedGender);
 	};
 
 	// Change page
@@ -101,8 +101,8 @@ export default function App() {
 
 	if (error) {
 		return (
-			<div className="status App error">
-				<p>Error: {error.message}</p>
+			<div className="status  error">
+				<p> {error.message}</p>
 				<div>Check Network Connection and Reload Page</div>
 			</div>
 		);
@@ -117,15 +117,19 @@ export default function App() {
 			<div className="App">
 				<h1>User Information</h1>
 				<Search handleChange={handleChange} searchInput={searchInput} />
-				<Radio selectedGender={selectedGender} onGenderChange={onGenderChange} formSubmit={formSubmit} />
-				<PaymentMethod onPaymentChange={onPaymentChange} selectedPaymentRadio={selectedPayment} />
-				<Card
-					results={currentResults}
-					filtered={filterDisplay}
-					searchInput={searchInput}
-					genderDisplay={genderDisplay}
-					paymentDisplay={paymentDisplay}
-				/>
+				<div className="radios">
+					<Gender selectedGender={selectedGender} onGenderChange={onGenderChange} formSubmit={formSubmit} />
+					<PaymentMethod onPaymentChange={onPaymentChange} selectedPaymentRadio={selectedPayment} />
+				</div>
+				<div className="users-display">
+					<Card
+						results={currentResults}
+						filtered={filterDisplay}
+						searchInput={searchInput}
+						genderDisplay={genderDisplay}
+						paymentDisplay={paymentDisplay}
+					/>
+				</div>
 				<Pagination resultsPerPage={resultsPerPage} totalPosts={results.length} paginate={paginate} />
 			</div>
 		);

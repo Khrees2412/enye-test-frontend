@@ -12,21 +12,28 @@ body {
 }
 .spinner {
 	width: 300px;
+	height: 300px;
 }
 .users-display {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
 .card {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* grid-template-columns: repeat(2, 1fr); */
 	width: 75%;
 	border: 2px solid ghostwhite;
 	border-radius: 3px;
 	/* box-shadow: 3px 2px 3px 2px gray, -3px -2px 3px 2px gray, 3px -2px 3px 2px gray, -3px 2px 3px 2px gray; */
 	padding: 30px;
 	margin: 10px auto;
+}
+.filter-header {
+	font-size: 18px;
+	font-weight: 500;
+	color: rgb(206, 235, 104);
 }
 h1 {
 	text-align: center;
@@ -67,16 +74,20 @@ li {
 .page-link {
 	color: blue;
 }
-.radio-component {
+.radios {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.gender-component {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 75%;
-	color: yellow;
+	color: pink;
 }
 .payment-method {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 75%;
 	color: pink;
@@ -84,5 +95,9 @@ li {
 @media only screen and (max-width: 768px) {
 	input {
 		width: 100%;
+	}
+	.users-display {
+		display: flex;
+		flex-direction: column;
 	}
 }

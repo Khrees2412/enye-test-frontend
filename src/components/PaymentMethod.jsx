@@ -4,55 +4,58 @@ export default function PaymentMethod({ onPaymentChange, selectedPayment }) {
 	return (
 		<div>
 			<form className="payment-method">
+				<p className="filter-header">Filter By Payment Method</p>
 				<div>
-					<label htmlFor="paypal">
+					<label>
+						<input
+							type="radio"
+							name="payment"
+							value="paypal"
+							checked={selectedPayment === "paypal"}
+							onChange={onPaymentChange}
+						/>
 						Paypal
 						<FaPaypal />
 					</label>
-					<input
-						type="radio"
-						id="paypal"
-						value="paypal"
-						checked={selectedPayment === "paypal"}
-						onChange={onPaymentChange}
-					/>
 				</div>
+
 				<div>
-					<label htmlFor="money-order">
+					<label>
+						<input
+							type="radio"
+							name="payment"
+							value="money order"
+							checked={selectedPayment === "money order"}
+							onChange={onPaymentChange}
+						/>
 						Money Order <FaMoneyBillAlt />
 					</label>
-					<input
-						type="radio"
-						id="money-order"
-						value="money order"
-						checked={selectedPayment === "money order"}
-						onChange={onPaymentChange}
-					/>
 				</div>
+
 				<div>
-					<label htmlFor="check">
+					<label>
+						<input
+							type="radio"
+							name="payment"
+							value="check"
+							checked={selectedPayment === "check"}
+							onChange={onPaymentChange}
+						/>
 						Check <FaMoneyCheck />
 					</label>
-					<input
-						type="radio"
-						id="check"
-						value="check"
-						checked={selectedPayment === "check"}
-						onChange={onPaymentChange}
-					/>
 				</div>
+
 				<div>
-					<label htmlFor="cc">
-						CC
-						<FaCreditCard />
+					<label>
+						<input
+							type="radio"
+							name="payment"
+							value="cc"
+							checked={selectedPayment === "cc"}
+							onChange={onPaymentChange}
+						/>
+						CC <FaCreditCard />
 					</label>
-					<input
-						type="radio"
-						id="cc"
-						value="cc"
-						checked={selectedPayment === "cc"}
-						onChange={onPaymentChange}
-					/>
 				</div>
 			</form>
 		</div>
