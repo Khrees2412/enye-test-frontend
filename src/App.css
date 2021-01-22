@@ -1,6 +1,6 @@
 body {
-	background-color: indigo;
-	color: white;
+	background-color: white;
+	color: black;
 	font-family: "Roboto", sans-serif;
 	/* #222831 */
 }
@@ -18,13 +18,21 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
+.navbar {
+	margin-top: -20px;
+	background-color: #0398fc;
+	color: black;
+	font-size: 18px;
+}
+.searchbox h2 {
+	margin-top: 10px;
+}
 .card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* grid-template-columns: repeat(2, 1fr); */
 	width: 75%;
-	border: 2px solid ghostwhite;
+	border: 2px solid #ccc;
 	border-radius: 3px;
 	/* box-shadow: 3px 2px 3px 2px gray, -3px -2px 3px 2px gray, 3px -2px 3px 2px gray, -3px 2px 3px 2px gray; */
 	padding: 30px;
@@ -69,7 +77,11 @@ li {
 }
 .page-item {
 	padding: 10px;
-	background-color: black;
+	background-color: #0398fc;
+}
+.page-item button {
+	padding: 10px;
+	border: none;
 }
 .page-link {
 	color: blue;

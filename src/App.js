@@ -103,6 +103,7 @@ export default function App() {
 		return (
 			<div className="status  error">
 				<p> {error.message}</p>
+				<br />
 				<div>Check Network Connection and Reload Page</div>
 			</div>
 		);
@@ -115,12 +116,18 @@ export default function App() {
 	} else {
 		return (
 			<div className="App">
-				<h1>User Information</h1>
-				<Search handleChange={handleChange} searchInput={searchInput} />
-				<div className="radios">
-					<Gender selectedGender={selectedGender} onGenderChange={onGenderChange} formSubmit={formSubmit} />
-					<PaymentMethod onPaymentChange={onPaymentChange} selectedPaymentRadio={selectedPayment} />
-				</div>
+				<nav className="navbar">
+					<Search handleChange={handleChange} searchInput={searchInput} />
+					<div className="radios">
+						<Gender
+							selectedGender={selectedGender}
+							onGenderChange={onGenderChange}
+							formSubmit={formSubmit}
+						/>
+						<PaymentMethod onPaymentChange={onPaymentChange} selectedPaymentRadio={selectedPayment} />
+					</div>
+				</nav>
+
 				<div className="users-display">
 					<Card
 						results={currentResults}
